@@ -99,6 +99,9 @@ class HoneypotServiceProvider extends ServiceProvider {
      */
     protected function isLaravelVersion($startsWith)
     {
-        return \Str::startsWith(Application::VERSION, $startsWith);
+        //return \Str::startsWith(Application::VERSION, $startsWith);
+        $well_does_it = starts_with(Application::VERSION, $startsWith);
+        
+        return $well_does_it;
     }
 }
